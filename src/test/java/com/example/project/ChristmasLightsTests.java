@@ -18,15 +18,24 @@ class LightGridTest {
     void turnOn_SingleLight_LightIsOn() {
         LightGrid grid = new LightGrid();
         grid.turnOn(0, 0, 0, 0);
-        assertEquals(1, grid.countLit(), "Exactly one light should be lit");
+        assertEquals(1, grid.countLit(), "one light lit");
     }
 
     @Test
 void turnOn_ThreeByThreeBlock_NineLightsAreLit() {
     LightGrid grid = new LightGrid();
     grid.turnOn(0, 0, 2, 2); // 3x3 block
-    assertEquals(9, grid.countLit(), "3x3 block should result in 9 lights being lit");
+    assertEquals(9, grid.countLit(), "3x3 block  result in 9 lights  lit");
 }
+
+@Test
+void turnOff_SinglePreviouslyLitLight_LightIsOff() {
+    LightGrid grid = new LightGrid();
+    grid.turnOn(0, 0, 0, 0);   // Turn on one light
+    grid.turnOff(0, 0, 0, 0);  // Turn it back off
+    assertEquals(0, grid.countLit(), "Light should be off after being turned off");
+}
+
 
 
 }
