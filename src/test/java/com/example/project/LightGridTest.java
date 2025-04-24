@@ -22,7 +22,7 @@ class LightGridTest {
 void turnOn_ThreeByThreeBlock_NineLightsAreLit() {
     LightGrid grid = new LightGrid();
     grid.turnOn(0, 0, 2, 2); // 3x3 block
-    assertEquals(9, grid.countLit(), "3x3 block  result in 9 lights  lit");
+    assertEquals(9, grid.countLit(), "3x3 block result in 9 lights  lit");
 }
 
 @Test
@@ -39,7 +39,12 @@ void toggle_SingleOffLight_LightIsOn() {
     grid.toggle(0, 0, 0, 0);  // Toggle one light
     assertEquals(1, grid.countLit(), "Light should be on after changing from off");
 }
-
+@Test
+void toggle_FullRow_OneThousandLightsAreLit() {
+    LightsGrid grid = new LightGrid();
+    grid.toggle(0, 0, 999, 0);
+    assertEquals(100, grid.countLit());
+}
 
 }
 
