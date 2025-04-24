@@ -1,4 +1,4 @@
-package A4.ChistmasLightsTests;
+package com.example.project;
 
 public class LightGrid {
     private boolean[][] grid = new boolean[1000][1000];
