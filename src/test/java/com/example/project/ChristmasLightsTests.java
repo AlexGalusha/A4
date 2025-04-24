@@ -36,6 +36,12 @@ void turnOff_SinglePreviouslyLitLight_LightIsOff() {
     assertEquals(0, grid.countLit(), "Light should be off after being turned off");
 }
 
+@Test
+void toggle_SingleOffLight_LightIsOn() {
+    LightGrid grid = new LightGrid();
+    grid.toggle(0, 0, 0, 0);  // Toggle one light
+    assertEquals(1, grid.countLit(), "Light should be on after changing from off");
+}
 
 
 }
