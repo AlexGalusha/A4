@@ -46,5 +46,11 @@ void toggle_FullRow_OneThousandLightsAreLit() {
     assertEquals(100, grid.countLit());
 }
 
+@Test
+void turnOn_EntireGrid_OneMillionLightsAreLit() {
+    LightGrid grid = new LightGrid();
+    grid.turnOn(0, 0, 999, 999);
+    assertEquals(1_000_000, grid.countLit());
+
 }
 
