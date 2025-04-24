@@ -58,6 +58,7 @@ void turnOn_EntireGrid_OneMillionLightsAreLit() {
 void toggle_TwiceOnSameArea_ReturnsToOriginalState() {
     LightGrid grid = new LightGrid();
     grid.toggle(100, 100, 200, 200); 
+    grid.toggle(100, 100, 200, 200); 
     assertEquals(0, grid.countLit());
 
 }    
