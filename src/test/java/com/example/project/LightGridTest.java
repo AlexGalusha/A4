@@ -43,7 +43,7 @@ void toggle_SingleOffLight_LightIsOn() {
 void toggle_FullRow_OneThousandLightsAreLit() {
     LightsGrid grid = new LightGrid();
     grid.toggle(0, 0, 999, 0);
-    assertEquals(100, grid.countLit());
+    assertEquals(1000, grid.countLit());
 }
 
 @Test
